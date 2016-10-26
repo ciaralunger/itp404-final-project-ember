@@ -1,5 +1,10 @@
 # Final
 
+Description:
+A restaurant recommendation site that filters/recommends restaurants based on rating, distance from USC, type of food, and possibly other factors; 
+user can add reviews to restaurants, and can mark existing reviews as helpful or unhelpful
+
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
