@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import ENV from 'final/config/environment';
 
 export default Ember.Route.extend({
 	model: function (params) {
@@ -8,7 +7,7 @@ export default Ember.Route.extend({
 
 		var locationId = meal.locationId;
 		var mealId = params.mi;
-		var url = 'http://localhost:3000/api/restaurants?li=' + locationId + '&mi=' + mealId;
+		var url = 'https://ciara-lunger-api.herokuapp.com/api/restaurants?li=' + locationId + '&mi=' + mealId;
 
 		//console.log('params:', params);
 

@@ -25,7 +25,6 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.APP.apiEndpoint = 'http://localhost:3000';
 
       ENV['ember-cli-mirage'] = {
       enabled: false
@@ -49,7 +48,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.apiEndpoint = 'http://ciara-lunger-api.herokuapp.com';
+    //ENV.APP.apiEndpoint = 'http://ciara-lunger-api.herokuapp.com';
 
       ENV['ember-cli-mirage'] = {
       enabled: false

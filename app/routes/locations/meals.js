@@ -1,10 +1,9 @@
 import Ember from 'ember';
-import ENV from 'final/config/environment';
 
 export default Ember.Route.extend({
 	model: function (params) {
 		//var locationId = params.li;
-		var url = 'http://localhost:3000/api/meals';
+		var url = 'https://ciara-lunger-api.herokuapp.com/api/meals';
 
 		//console.log(params);
 

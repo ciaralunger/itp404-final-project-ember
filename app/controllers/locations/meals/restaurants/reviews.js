@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import ENV from 'final/config/environment';
 
 export default Ember.Controller.extend({
 	actions: {
@@ -14,7 +13,7 @@ export default Ember.Controller.extend({
 
 				var promise = Ember.$.ajax({
 					type:'post',
-					url: 'http://localhost:3000/api/reviews',
+					url: 'https://ciara-lunger-api.herokuapp.com/api/reviews',
 					data: {
 						reviewText: reviewText,
 						restaurantId: restaurantId
