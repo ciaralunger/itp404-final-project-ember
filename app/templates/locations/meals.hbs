@@ -1,0 +1,16 @@
+
+<h3>Which meal of the day would you like?</h3>
+
+<!-- {{log model}} -->
+
+{{#each model.meals as |meal|}}
+  <div>
+  	{{#link-to "locations.meals.restaurants" meal.id}}
+		<li class = "meal">{{meal.name}}</li>
+	{{/link-to}}
+  </div>
+{{/each}}
+
+
+{{outlet}}
+

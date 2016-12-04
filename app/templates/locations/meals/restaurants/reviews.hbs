@@ -1,0 +1,28 @@
+<h3>Reviews</h3>
+
+{{log model}}
+
+{{#each model.data as |review|}}
+  <div class = "review">
+    <ul>
+  	{{review.reviewText}}
+    </ul>
+  </div>
+  <hr>
+{{else}}
+	No reviews yet!
+  <div>
+  <hr>
+  </div>
+{{/each}}
+
+<br>
+
+<b>Add your review here:</b> <br>
+
+<form onsubmit={{action 'createReview'}}>
+  {{textarea class="reviewText" type="text" value=reviewText rows="5" cols = "60"}}<br>
+  <button type="Submit Review" class="btn-primary">Submit</button>
+</form>
+
+{{outlet}}

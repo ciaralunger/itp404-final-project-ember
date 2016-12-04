@@ -1,0 +1,38 @@
+<div class = "row">
+	<div class = "col-md-5">
+
+<h3>Restaurants</h3>
+
+<b>Recommendations below! Add a restaurant, or click to see reviews.</b>
+
+<br>
+<br>
+
+{{#each model as |restaurant|}}
+  <div class="restaurant">
+  <ul>
+	{{restaurant.name}} -  
+	{{#link-to "locations.meals.restaurants.reviews" restaurant.id}}
+		See Reviews
+	{{/link-to}}
+	</ul>
+  </div>
+{{else}}
+	<p>You haven't added any restaurants at this location for this meal yet</p>
+{{/each}}
+
+<br>
+
+<!-- Add restaurant form -->
+<form onsubmit={{action 'createRestaurant'}}>
+	Name: {{input class="restaurantName" type="text" value=restaurantName}}
+	<button type="submit" class="btn-primary">Add Restaurant</button>
+</form>
+
+	</div>
+	<div class = "col-md-6">
+
+{{outlet}}
+
+	</div>
+</div>

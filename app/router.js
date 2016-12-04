@@ -7,8 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('restaurant');
-  this.route('review');
+  this.route('locations', function() {
+    this.route('meals', { path: ':li' }, function() {
+      this.route('restaurants', { path: ':mi' }, function() {
+        this.route('reviews', { path: ':ri' });
+      });
+    });
+  });
 });
 
 export default Router;
